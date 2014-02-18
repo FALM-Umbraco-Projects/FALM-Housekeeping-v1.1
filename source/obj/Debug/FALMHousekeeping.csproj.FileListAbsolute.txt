@@ -1,0 +1,5 @@
+C:\Users\Adriano\Documents\Visual Studio 2008\Projects\UmbracoPCM\umbraco\presentation\bin\FALMHousekeeping.dll
+C:\Users\Adriano\Documents\Visual Studio 2008\Projects\UmbracoPCM\umbraco\presentation\bin\FALMHousekeeping.pdb
+C:\Users\Adriano\Documents\Visual Studio 2008\Projects\UmbracoPCM\extensions\FALMHousekeeping\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Adriano\Documents\Visual Studio 2008\Projects\UmbracoPCM\extensions\FALMHousekeeping\obj\Debug\FALMHousekeeping.dll
+C:\Users\Adriano\Documents\Visual Studio 2008\Projects\UmbracoPCM\extensions\FALMHousekeeping\obj\Debug\FALMHousekeeping.pdb

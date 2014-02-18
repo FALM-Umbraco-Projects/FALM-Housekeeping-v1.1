@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9E964CBA-F817-4B35-8D07-F8A03EC439F7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FALMHousekeeping</RootNamespace>
+    <AssemblyName>FALMHousekeeping</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\umbraco\presentation\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\umbraco\presentation\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\components\editorControls\umbraco.editorControls.csproj">
+      <Project>{255F5DF1-4E43-4758-AC05-7A0B68EB021B}</Project>
+      <Name>umbraco.editorControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\components\macroRenderings\umbraco.macroRenderings.csproj">
+      <Project>{52AB8F1F-FB76-4E8C-885F-0747B6CE71EC}</Project>
+      <Name>umbraco.macroRenderings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\components\umbraco.controls\umbraco.controls.csproj">
+      <Project>{6EDD2061-82F2-461B-BB6E-879245A832DE}</Project>
+      <Name>umbraco.controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\components\umbraco.webservices\umbraco.webservices.csproj">
+      <Project>{CBDB56AC-FF02-4421-9FD4-ED82E339D8E2}</Project>
+      <Name>umbraco.webservices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\umbraco\businesslogic\umbraco.businesslogic.csproj">
+      <Project>{E469A9CE-1BEC-423F-AC44-713CD72457EA}</Project>
+      <Name>umbraco.businesslogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\umbraco\cms\umbraco.cms.csproj">
+      <Project>{CCD75EC3-63DB-4184-B49D-51C1DD337230}</Project>
+      <Name>umbraco.cms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\umbraco\datalayer\umbraco.datalayer.csproj">
+      <Project>{C7CB79F0-1C97-4B33-BFA7-00731B579AE2}</Project>
+      <Name>umbraco.datalayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\umbraco\interfaces\umbraco.interfaces.csproj">
+      <Project>{511F6D8D-7717-440A-9A57-A507E9A8B27F}</Project>
+      <Name>umbraco.interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\umbraco\presentation\umbraco.presentation.csproj">
+      <Project>{651E1350-91B6-44B7-BD60-7207006D7003}</Project>
+      <Name>umbraco.presentation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\umbraco\providers\umbraco.providers.csproj">
+      <Project>{D7636876-0756-43CB-A192-138C6F0D5E42}</Project>
+      <Name>umbraco.providers</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="umbraco\FALMHousekeeping\logs\cleanupLogs.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="umbraco\FALMHousekeeping\media\cleanupMediaFS.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="umbraco\FALMHousekeeping\users\deleteUsersBySelection.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="umbraco\FALMHousekeeping\versions\cleanupVersionsByCount.aspx" />
+    <Content Include="umbraco\FALMHousekeeping\versions\cleanupVersionsByDate.aspx" />
+    <Content Include="umbraco\FALMHousekeeping\versions\showVersions.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="loadHousekeeping.cs" />
+    <Compile Include="umbraco\FALMHousekeeping\logs\cleanupLogs.aspx.cs">
+      <DependentUpon>cleanupLogs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="umbraco\FALMHousekeeping\logs\cleanupLogs.aspx.designer.cs">
+      <DependentUpon>cleanupLogs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="umbraco\FALMHousekeeping\logs\showLogs.aspx.cs">
+      <DependentUpon>showLogs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="umbraco\FALMHousekeeping\logs\showLogs.aspx.designer.cs">
+      <DependentUpon>showLogs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="umbraco\FALMHousekeeping\media\cleanupMediaFS.aspx.cs">
+      <DependentUpon>cleanupMediaFS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="umbraco\FALMHousekeeping\media\cleanupMediaFS.aspx.designer.cs">
+      <DependentUpon>cleanupMediaFS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="umbraco\FALMHousekeeping\users\deleteUsersBySelection.aspx.cs">
+      <DependentUpon>deleteUsersBySelection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="umbraco\FALMHousekeeping\users\deleteUsersBySelection.aspx.designer.cs">
+      <DependentUpon>deleteUsersBySelection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="umbraco\FALMHousekeeping\versions\cleanupVersionsByCount.aspx.cs">
+      <DependentUpon>cleanupVersionsByCount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="umbraco\FALMHousekeeping\versions\cleanupVersionsByCount.aspx.designer.cs">
+      <DependentUpon>cleanupVersionsByCount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="umbraco\FALMHousekeeping\versions\cleanupVersionsByDate.aspx.cs">
+      <DependentUpon>cleanupVersionsByDate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="umbraco\FALMHousekeeping\versions\cleanupVersionsByDate.aspx.designer.cs">
+      <DependentUpon>cleanupVersionsByDate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="umbraco\FALMHousekeeping\versions\showVersions.aspx.cs">
+      <DependentUpon>showVersions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="umbraco\FALMHousekeeping\versions\showVersions.aspx.designer.cs">
+      <DependentUpon>showVersions.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Release notes.txt" />
+    <Content Include="umbraco\FALMHousekeeping\images\logs_cleanup.gif" />
+    <Content Include="umbraco\FALMHousekeeping\images\logs_viewer.gif" />
+    <Content Include="umbraco\FALMHousekeeping\images\media_folder_cleanup.gif" />
+    <Content Include="umbraco\FALMHousekeeping\images\users_delete.gif" />
+    <Content Include="umbraco\FALMHousekeeping\images\versions_cleanup.gif" />
+    <Content Include="umbraco\FALMHousekeeping\images\versions_view.gif" />
+    <Content Include="umbraco\FALMHousekeeping\logs\showLogs.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)*.gif" "$(TargetDir)..\" /s /y
+xcopy "$(ProjectDir)*.aspx" "$(TargetDir)..\" /s /y
+xcopy "$(ProjectDir)*.js" "$(TargetDir)..\" /s /y</PostBuildEvent>
+  </PropertyGroup>
+</Project>
