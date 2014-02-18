@@ -10,25 +10,6 @@ N.B.: in the current release this feature works only with "UploadAllowDirectorie
 
 Versions History
 =================
-- v4.11.0.2 - improved multilanguage support (Dictionary)
-Now the dictionary items are taken according to the backoffice user's language.
-********************************************************************************************************************
-ATTENTION
-Please uninstall any previous version before install this version.
-********************************************************************************************************************
-- v4.11.0.1 - fixed issue
-No treenode creation
-- v4.11.0.0 - compatible with all DB
-resolved compatibility with Umbraco v4.8+ 
-resolved compatibility with Umbraco v6
-multilanguage (with Dictionary)
-- v4.5.0.1 - Fixed issue of no removing versions in v4.5 (*** db_owner required ***)
-********************************************************************************************************************
-ATTENTION
-This Version requires that the SQL User is "db_owner" (or has the correct privileges to manage foreign keys) because the installation will modify the "FK_cmsPreviewXml_cmsContentVersion" constraint of the table "cmsPreviewXml" to enable the "ON CASCADE DELETE" rule.
-Thank you to Alessandro Ghizzardi (http://umbracoitalia.org/) who helped me for fixing the problem
-********************************************************************************************************************
-- v4.5.0.0 - Version compatible with Umbraco from v4.5 to v4.7.2
 - v1.1.0.0 - Version compatible with Umbraco v4.0 
 - Logs manager: 
      - Added filtering capabilities on NodeId
